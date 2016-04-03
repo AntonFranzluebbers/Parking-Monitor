@@ -4,6 +4,7 @@
   --mat-teal: #009688;
   --mat-cyan: #00BCD4;
   --mat-white: #F5F5F5;
+  --mat-dark-teal: #00796B;
 }
 
 body {
@@ -59,7 +60,7 @@ a {
 
 a:hover {
   //text-decoration: underline;
-
+  color: var(--mat-dark-teal);
 }
 
 a div {
