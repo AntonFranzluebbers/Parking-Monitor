@@ -29,6 +29,7 @@ body {
   font-size: 5em;
   margin: 0;
   color: var(--mat-white);
+  text-shadow: 0 0 1em black;
 }
 
 .project-tagline {
@@ -47,10 +48,11 @@ body {
 
 .main-content h3 {
   color: var(--mat-dark-green);
+  font-family: "Roboto", sans-serif;
 }
 
-.main-content h4 {
-  color: var(--mat-cyan);
+.main-content {
+  font-family: "Roboto Slab", serif;
 }
 
 a {
@@ -59,24 +61,58 @@ a {
 }
 
 a:hover {
-  //text-decoration: underline;
+  text-decoration: underline;
   color: var(--mat-dark-teal);
 }
 
-a div {
+ul a li {
   background-color: #4CAF50;
   background: linear-gradient(to right, var(--mat-green), var(--mat-teal));
-  max-width: 10em;
+  width: 10em;
+  margin: 1em;
   padding: 1em;
   color: var(--mat-white);
   text-decoration: none;
   transition: box-shadow .25s, padding .25s;
 }
 
-a:hover div {
+ul a:hover {
+  text-decoration: none;
+}
+
+ul a:hover li {
+  box-shadow: 0 0 .1em black;
+}
+
+.large-button:hover {
+  text-decoration: none;
+}
+
+.large-button {
+  text-align: center;
+}
+
+.large-button div {
+  background-color: #4CAF50;
+  background: linear-gradient(to right, var(--mat-green), var(--mat-teal));
+  width: 10em;
+  margin: auto;
+  padding: 1em;
+  color: var(--mat-white);
+  text-decoration: none;
+  transition: box-shadow .25s, padding .25s;
+}
+
+.large-button div img {
+  position: relative;
+  float:left;
+  top:-.5em;
+  left:-.3em;
+}
+
+.large-button:hover div {
   //background: linear-gradient(to right, var(--mat-teal), var(--mat-green));
   box-shadow: 0 0 .1em black;
-  padding: 1em 0em 1em 2em;
 }
 
 .site-footer {
