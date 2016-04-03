@@ -8,11 +8,9 @@
     <meta charset="UTF-8">
     <title>Parking Monitor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="icon" href="THIS_DOESN'T_EXIST.png">
+    <link rel="icon" href="THIS_DOESN'T_EXIST_YET_TODO.png">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -35,8 +33,8 @@
 
       <a href="index.html">Home</a> &gt; <a href = "map.php">Map</a>
 	<h3>Fill level of garage</h3>
-      <p>Parking space 
-      <?php	
+      <p>Parking space
+      <?php
         $last = mysql_query('SELECT * FROM parking_monitor.garage ORDER BY id DESC LIMIT 1');
         while ($row = mysql_fetch_assoc($last)) {
           if ($row["distance"] > 200) {
@@ -60,7 +58,7 @@
           </tr>
 <?php
     // Retrieve all records and display them
-    $result = mysql_query("SELECT * FROM parking_monitor.garage ORDER BY id ASC");
+    $result = mysql_query("SELECT * FROM parking_monitor.garage ORDER BY id DESC");
 
     // process every record
     while( $row = mysql_fetch_array($result) )
@@ -80,7 +78,7 @@
 
       <footer class="site-footer">
 
-        <span class="site-footer-credits">&copy; Ryan Charnoky, Anton Franzluebbers, Nithin Jino 2016</span>
+        &copy; Ryan Charnoky, Anton Franzluebbers, Nithin Jino 2016
       </footer>
 
     </section>
@@ -88,4 +86,3 @@
 
   </body>
 </html>
-
