@@ -20,13 +20,13 @@ body {
   background-color: #4CAF50;
   background: linear-gradient(var(--mat-teal), var(--mat-green));
   margin:0;
-  padding: 4em;
+  padding: 1em;
 }
 
 .project-name {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
-  font-size: 5em;
+  font-size: 4em;
   margin: 0;
   color: var(--mat-white);
   text-shadow: 0 0 1em black;
@@ -53,6 +53,15 @@ body {
 
 .main-content {
   font-family: "Roboto Slab", serif;
+  animation: slideUp .5s;
+  position: relative;
+}
+
+@keyframes slideUp {
+  0% {top:100px;
+      opacity: 0;}
+  100% {top:0;
+        opacity: 1;}
 }
 
 a {
@@ -65,52 +74,64 @@ a:hover {
   color: var(--mat-dark-teal);
 }
 
-ul a li {
+.available-lots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: inherit;
+}
+
+.available-lots div {
+  flex: 1 1 auto;
   background-color: #4CAF50;
   background: linear-gradient(to right, var(--mat-green), var(--mat-teal));
-  width: 10em;
+  max-width: 10em;
   margin: 1em;
   padding: 1em;
   color: var(--mat-white);
   text-decoration: none;
-  transition: box-shadow .25s, padding .25s;
+  transition: box-shadow .25s, padding .25s, transform .25s;
+  transform: perspective(10em);
 }
 
-ul a:hover {
+.available-lots a:hover {
   text-decoration: none;
 }
 
-ul a:hover li {
+.available-lots a:hover div {
   box-shadow: 0 0 .1em black;
+  transform: perspective(10em) rotateX(30deg);
 }
 
-.large-button:hover {
+.large-button a:hover {
   text-decoration: none;
 }
 
 .large-button {
   text-align: center;
-}
-
-.large-button div {
-  background-color: #4CAF50;
-  background: linear-gradient(to right, var(--mat-green), var(--mat-teal));
   width: 10em;
   margin: auto;
+}
+
+.large-button a div {
+  background-color: #4CAF50;
+  background: linear-gradient(to right, var(--mat-green), var(--mat-teal));
+
+
   padding: 1em;
   color: var(--mat-white);
   text-decoration: none;
   transition: box-shadow .25s, padding .25s;
 }
 
-.large-button div img {
+.large-button a div img {
   position: relative;
   float:left;
   top:-.5em;
   left:-.3em;
 }
 
-.large-button:hover div {
+.large-button a:hover div {
   //background: linear-gradient(to right, var(--mat-teal), var(--mat-green));
   box-shadow: 0 0 .1em black;
 }
@@ -118,4 +139,13 @@ ul a:hover li {
 .site-footer {
   font-size:.8em;
   color: #9E9E9E;
+}
+
+@media screen and (min-width: 50em) {
+  .page-header {
+    padding: 4em;
+  }
+  .available-lots div {
+    padding: 2em;
+  }
 }
