@@ -84,13 +84,17 @@ a:hover {
 .available-lots div {
   flex: 1 1 auto;
   background-color: #4CAF50;
-  background: linear-gradient(to right, var(--mat-green), var(--mat-teal));
-  max-width: 10em;
+  width: 5em;
+  height: 1.5em;
   margin: 1em;
   padding: 1em;
   color: var(--mat-white);
   text-decoration: none;
-  transition: box-shadow .25s, padding .25s, transform .25s;
+  background: linear-gradient(to right, var(--mat-green), var(--mat-teal));
+  transition: box-shadow .25s, padding .25s, transform .25s, top .25s;
+}
+
+.available-lots .lot-thumb {
   transform: perspective(10em);
 }
 
@@ -101,6 +105,20 @@ a:hover {
 .available-lots a:hover div {
   box-shadow: 0 0 .1em black;
   transform: perspective(10em) rotateX(30deg);
+}
+
+.peek {
+  float:left;
+  transform: perspective(3em) rotateX(-90deg);
+  position: relative;
+  top:-4.5em;
+  margin:0;
+
+}
+
+.available-lots a:hover .peek {
+  transform: perspective(17em) rotateX(-60deg);
+  top:-2.9em;
 }
 
 .large-button a:hover {
