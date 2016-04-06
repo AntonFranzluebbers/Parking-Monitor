@@ -5,6 +5,7 @@
   --mat-cyan: #00BCD4;
   --mat-white: #F5F5F5;
   --mat-dark-teal: #00796B;
+  //--mat-blue: #2196F3;
 }
 
 body {
@@ -82,14 +83,17 @@ a:hover {
 }
 
 .available-lots div {
-  width: 5em;
-  height: 1.5em;
+  margin: 1em;
+
 }
 
 .available-lots .lot-thumb {
+  width: 5em;
+  height: 1.5em;
+  height: 1.5em;
   flex: 1 1 auto;
   background-color: #4CAF50;
-  margin: 1em;
+  text-align: center;
   padding: 1em;
   color: var(--mat-white);
   text-decoration: none;
@@ -102,23 +106,30 @@ a:hover {
   text-decoration: none;
 }
 
-.available-lots a:hover div {
+.available-lots a:hover .lot-thumb, .available-lots a:focus .lot-thumb{
   box-shadow: 0 0 .1em black;
   transform: perspective(10em) rotateX(30deg);
 }
 
 .peek {
   float:none;
+  position:relative;
+  text-align: center;
+  color: var(--mat-white);
   //transform: perspective(17em) rotateX(-90deg);
-  position: relative;
-  //top:-4.5em;
-  margin:0;
-  background-color: red;
+  bottom:3.6em;
+  padding:0;
+  background-color: var(--mat-dark-teal);
+  width: 7em;
+  height:0;
+  z-index: -1;
+  transition: bottom .25s, height .25s;
 }
 
-.available-lots a:hover .peek {
+.available-lots a:hover .peek, .available-lots a:focus .peek {
   //transform: perspective(17em) rotateX(-60deg);
-  //top:-2.9em;
+  bottom:1em;
+  height: 1.6em;
 }
 
 .large-button a:hover {
@@ -159,11 +170,15 @@ a:hover {
   color: #9E9E9E;
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 75em) {
   .page-header {
     padding: 4em;
   }
-  .available-lots div {
+  .available-lots .lot-thumb {
     padding: 2em;
+  }
+
+  .available-lots .peek {
+    width: 9em;
   }
 }
