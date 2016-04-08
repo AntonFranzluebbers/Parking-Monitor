@@ -88,9 +88,8 @@ a:hover {
 }
 
 .available-lots .lot-thumb {
-  width: 5em;
-  height: 1.5em;
-  height: 1.5em;
+  width: 7em;
+  height: 4em;
   flex: 1 1 auto;
   background-color: #4CAF50;
   text-align: center;
@@ -100,6 +99,12 @@ a:hover {
   background: linear-gradient(to right, var(--mat-green), var(--mat-teal));
   transition: box-shadow .25s, padding .25s, transform .25s, top .25s;
   transform: perspective(10em);
+}
+
+.available-lots .lot-thumb span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
 }
 
 .available-lots a:hover {
@@ -175,7 +180,7 @@ a:hover {
     padding: 4em;
   }
   .available-lots .lot-thumb {
-    padding: 2em;
+    padding: 1em;
   }
 
   .available-lots .peek {
