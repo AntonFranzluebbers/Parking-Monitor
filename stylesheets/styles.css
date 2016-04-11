@@ -26,6 +26,16 @@ body {
   padding: 1em;
 }
 
+.switch-testing {
+  position: absolute;
+  right:0;
+  top:0;
+  background-color: var(--mat-teal);
+  color: var(--mat-white);
+  padding: 1em;
+  margin: 1em;
+}
+
 .project-name {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
