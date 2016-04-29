@@ -1,5 +1,5 @@
 <?php
-  include('/var/www/includess/dbconnect.php');
+  include('/var/www/includes/dbconnect.php');
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +31,7 @@
 
     <section class="main-content">
 
-      <a href="../index.html">Home</a> &gt; <a href = "../map.html">Map</a> &gt; <a href = "garage.html">Garage</a>
+      <a href="../index.html">Home</a> &gt; <a href = "../map.html">Map</a> &gt; <a href = "garage.php">Garage</a>
 	<h3>Fill level of garage</h3>
       <p>Parking space
       <?php

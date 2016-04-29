@@ -4,8 +4,10 @@
   --mat-teal: #009688;
   --mat-cyan: #00BCD4;
   --mat-white: #F5F5F5;
+  --mat-light-gray: #E0E0E0;
   --mat-dark-teal: #00796B;
   --mat-blue: #2196F3;
+  --mat-red: #f44336;
   --mat-yellow: #FFC107;
   --mat-dark-yellow: #F57C00;
 }
@@ -150,10 +152,11 @@ a:hover {
 }
 
 .spot-list-container {
-  background-color: #EEEEEE;
-  box-shadow: 0 0 1em black;
+  //background-color: #EEEEEE;
+  //box-shadow: 0 0 1em black;
   padding: .1em;
   margin: .1em;
+  transform: rotate(-1deg);
 }
 
 .spot-list {
@@ -166,16 +169,43 @@ a:hover {
   width: 1em;
   height: 2em;
   margin: .1em;
+  background-color: var(--mat-light-gray);
+}
+
+.spot-list-key {
+  list-style-type: none;
+}
+
+.spot-list-key li {
+  width: 9em;
+  padding: .5em;
+  font-weight: 900;
+  //background-color: var(--mat-light-gray);
+}
+
+.spot-list-key div {
+  width: 1.8em;
+  height: 1.8em;
+  float: left;
+  margin: .2em;
+  background-color: var(--mat-light-gray);
+}
+
+.spot-list .spot-full, .spot-list-key .spot-full {
+  background-color: var(--mat-red);
+}
+
+.spot-list .spot-empty, .spot-list-key .spot-empty {
   background-color: var(--mat-green);
 }
 
-.spot-list .yellow-striped {
+.spot-list .yellow-striped, .spot-list-key .yellow-striped {
   background-color: var(--mat-yellow);
   background-image: repeating-linear-gradient(45deg, #FFFFFF, #FFFFFF 4px, rgba(1,1,1,0) 4px, rgba(1,1,1,0) 8px);
   box-shadow: inset 0 0 0 4px #FFC107;
 }
 
-.spot-list .handicap {
+.spot-list .handicap, .spot-list-key .handicap {
   background-color: var(--mat-blue);
 }
 
@@ -185,16 +215,25 @@ a:hover {
   right: 2px;
 }
 
-.spot-list .blue-striped {
+.spot-list .blue-striped, .spot-list-key .blue-striped {
   background-color: var(--mat-blue);
   background-image: repeating-linear-gradient(45deg, #FFFFFF, #FFFFFF 4px, rgba(1,1,1,0) 4px, rgba(1,1,1,0) 8px);
   box-shadow: inset 0 0 0 4px #2196F3;
 }
 
-.spot-list a:hover li {
-  background-color: var(--mat-dark-green);
+.spot-list .spacer-spot {
+  background-color:rgba(0,0,0,0);
+  cursor: default;
 }
 
+.spot-list a:hover .spacer-spot {
+  background-color:rgba(0,0,0,0);
+}
+
+.spot-list a:hover li {
+  opacity: .5;
+}
+/*
 .spot-list a:hover .yellow-striped {
   background-color: var(--mat-dark-yellow);
   box-shadow: inset 0 0 0 4px #F57C00;
@@ -207,6 +246,15 @@ a:hover {
 
 .spot-list a:hover .handicap {
   background-color: var(--mat-blue);
+}*/
+
+.building {
+  background-color: var(--mat-light-gray);
+}
+
+#drift-build {
+  width:56em;
+  height:15em;
 }
 
 .large-button a:hover {

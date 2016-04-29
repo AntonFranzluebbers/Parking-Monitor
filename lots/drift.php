@@ -1,18 +1,18 @@
 <?php
-  include('dbconnect.php');
+  include('../../includes/dbconnect.php');
 ?>
 
-  <!DOCTYPE html>
-  <html lang="en-us">
+<!DOCTYPE html>
+<html lang="en-us">
 
   <head>
-    <meta charset="UTF-8">
-    <title>Parking Monitor | Driftmier Engineering Center (S17)</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700|Roboto+Slab:300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/styles.css" media="screen">
-    <link rel="icon" href="../images/ic_directions_car_black_48dp_1x.png">
-    <script>
+	<meta charset="UTF-8">
+	<title>Parking Monitor | Driftmier Engineering Center (S17)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700|Roboto+Slab:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/styles.css" media="screen">
+	<link rel="icon" href="../images/ic_directions_car_black_48dp_1x.png">
+	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -21,7 +21,7 @@
   ga('create', 'UA-26495633-4', 'auto');
   ga('send', 'pageview');
 
-</script>
+	</script>
   </head>
 
   <body>
@@ -33,12 +33,30 @@
 
     <section class="main-content">
 
-      <a href="../index.html">Home</a> &gt; <a href="../map.html">Map</a> &gt; <a href="drift.html">Driftmier Engineering Center (S17)</a>
+      <a href="../index.html">Home</a> &gt; <a href="../map.html">Map</a> &gt; <a href="drift.php">Driftmier Engineering Center (S17)</a>
       <h3>Fill level of Driftmier Engineering Center (S17)</h3>
+      <ul class="spot-list-key">
+        <li><div class="spot-empty"></div>Empty</li>
+        <li><div  class="spot-full"></div>Full</li>
+        <li><div  class=""></div>No data</li>
+        <li><div  class="yellow-striped"></div>No parking</li>
+        <li><div  class="blue-striped"></div>Handicap</li>
+      </ul>
 
       <div class="spot-list-container">
       <ul class="spot-list">
-        <a href="#"><li></li></a>
+        <a href="#"><li
+      	<?php
+        	$last = mysql_query('SELECT * FROM parking_monitor.garage ORDER BY id DESC LIMIT 1');
+	        while ($row = mysql_fetch_assoc($last)) {
+	          if ($row["distance"] > 200) {
+	            echo "class=\"spot-empty\"";
+	          } else {
+	            echo "class=\"spot-full\"";
+	          }
+	        }
+	?>
+		></li></a>
         <a href="#"><li></li></a>
         <a href="#"><li></li></a>
         <a href="#"><li></li></a>
@@ -88,6 +106,97 @@
       <br>
       <br>
       <ul class="spot-list">
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+      </ul>
+      <br>
+      <br>
+      <br>
+      <div id="drift-build" class="building"></div>
+      <br>
+      <ul class="spot-list">
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="spacer-spot"></li></a>
+        <a href="#"><li class="yellow-striped"></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li class="yellow-striped"></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li class="yellow-striped"></li></a>
+      </ul>
+      <br>
+      <br>
+      <br>
+      <ul class="spot-list">
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
+        <a href="#"><li></li></a>
         <a href="#"><li></li></a>
         <a href="#"><li></li></a>
         <a href="#"><li></li></a>
