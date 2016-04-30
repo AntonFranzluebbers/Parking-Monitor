@@ -1,4 +1,12 @@
-<!--  This file is part of Parking Monitor.
+This github hosts the code and html for the website parkingmonitor.ddns.net.
+
+This is project 2 for CSEE 2210 and the group members were Ryan Charnoky, Anton Franzluebbers, and Nithin Jino.
+
+The php and python file(s) are under licensed under GPLv3.
+
+
+
+   This file is part of Parking Monitor.
 
     Parking Monitor is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -11,20 +19,4 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Parking Monitor.  If not, see <http://www.gnu.org/licenses/>. -->
-
-
-
-<?php
-    // Connect to MySQL
-    include("../includes/dbconnect.php");
-
-    // Prepare the SQL statement
-    $SQL = "INSERT INTO parking_monitor.garage (sensor ,distance) VALUES ('".$_GET["serial"]."', '".$_GET["distance"]."')";     
-
-    // Execute SQL statement
-    mysql_query($SQL);
-
-    // Go to the review_data.php (optional)
-    header("Location: map.html");
-?>
+    along with Parking Monitor.  If not, see <http://www.gnu.org/licenses/>.
