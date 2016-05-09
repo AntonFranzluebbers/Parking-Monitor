@@ -1,0 +1,79 @@
+<?php
+  include('../includes/dbconnect.php');
+?>
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Parking Monitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700|Roboto+Slab:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/styles.css" media="screen">
+  <link rel="icon" href="images/ic_directions_car_black_48dp_1x.png">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-26495633-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+  <section class="page-header">
+    <h1 class="project-name">Parking Monitor <img src="images/ic_directions_car_white_48px.svg"></h1>
+    <h2 class="project-tagline">Map of available parking spots</h2>
+  </section>
+
+
+  <section class="main-content">
+
+    <a href="index.html">Home</a> &gt; <a href = "map.php">Map</a>
+    <h3>Choose a lot</h3>
+    <p>
+      This would be an image of campus with clickable overlays on the parking lots. Maybe there could just be a text list.
+    </p>
+    <p>
+      Avalable lots:
+      <div class="available-lots">
+        <!--a href="lots/garage.php">
+          <div class="lot-thumb">GARAGE (testing only)</div><div class="peek">100% FULL</div>
+        </a-->
+        <a href="lots/drift.php">
+          <div class="lot-thumb">Driftmier Engineering Center (S17)</div><div class="peek">
+      	<?php
+        	$last = mysql_query('SELECT * FROM parking_monitor.garage ORDER BY id DESC LIMIT 1');
+	        while ($row = mysql_fetch_assoc($last)) {
+	          if ($row["distance"] > 200) {
+	            echo "0% FULL";
+	          } else {
+	            echo "100% FULL";
+	          }
+	        }
+	?></div>
+        </a>
+        <a href="#">
+          <div class="lot-thumb">Carlton Street Deck (S15)</div><div class="peek">100% FULL</div>
+        </a>
+        <a href="#">
+          <div class="lot-thumb">South Deck (S11)</div><div class="peek">100% FULL</div>
+        </a>
+      </div>
+    </p>
+
+    <footer class="site-footer">
+      <hr>
+      <span class="site-footer-credits">&copy; Ryan Charnoky, Anton Franzluebbers, Nithin Jino 2016</span>
+    </footer>
+
+  </section>
+
+
+</body>
+
+</html>

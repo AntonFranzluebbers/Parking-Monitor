@@ -139,7 +139,7 @@ a:hover {
   bottom:3.6em;
   padding:0;
   background-color: var(--mat-dark-teal);
-  width: 7em;
+  width: 9em;
   height:0;
   z-index: -1;
   transition: bottom .25s, height .25s;
@@ -162,6 +162,7 @@ a:hover {
 .spot-list {
   list-style-type: none;
   margin: 0;
+  float:none;
 }
 
 .spot-list li {
@@ -248,13 +249,35 @@ a:hover {
   background-color: var(--mat-blue);
 }*/
 
+#compass-rose {
+  height: 3em;
+  float:left;
+  position:relative;
+  top: 20em;
+  left: 30em;
+  z-index:2;
+}
+
+.detailed-info-box {
+  background-color: var(--mat-light-gray);
+  box-shadow:0 0 .5em black inset;
+  padding:1em;
+  width:20em;
+  height:10em;
+  display:none;
+}
+
 .building {
   background-color: var(--mat-light-gray);
+  padding:5em;
+  font-weight: 900;
+  font-size: 1.3em;
+  text-align: center;
 }
 
 #drift-build {
-  width:56em;
-  height:15em;
+  width:35em;
+  height:5em;
 }
 
 .large-button a:hover {
@@ -304,7 +327,7 @@ a:hover {
   }
 
   .available-lots .peek {
-    width: 9em;
+    //width: 9em;
   }
 
   .spot-list-container {

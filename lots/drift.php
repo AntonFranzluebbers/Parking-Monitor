@@ -1,18 +1,3 @@
-<!--  This file is part of Parking Monitor.
-
-    Parking Monitor is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    Parking Monitor is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with Parking Monitor.  If not, see <http://www.gnu.org/licenses/>. -->
-
 <?php
   include('../../includes/dbconnect.php');
 ?>
@@ -48,8 +33,14 @@
 
     <section class="main-content">
 
-      <a href="../index.html">Home</a> &gt; <a href="../map.html">Map</a> &gt; <a href="drift.php">Driftmier Engineering Center (S17)</a>
+      <a href="../index.html">Home</a> &gt; <a href="../map.php">Map</a> &gt; <a href="drift.php">Driftmier Engineering Center (S17)</a>
       <h3>Fill level of Driftmier Engineering Center (S17)</h3>
+      
+      <div class="detailed-info-box">
+        <p>Time occupied in last 30 days: x%</p>
+        <p><img src="graph-mockup.png" width="200px" height="100px"/>
+      </div>
+
       <ul class="spot-list-key">
         <li><div class="spot-empty"></div>Empty</li>
         <li><div  class="spot-full"></div>Full</li>
@@ -57,8 +48,10 @@
         <li><div  class="yellow-striped"></div>No parking</li>
         <li><div  class="blue-striped"></div>Handicap</li>
       </ul>
+      
 
       <div class="spot-list-container">
+      <img id="compass-rose" src="../images/north-arrow-orienteering.svg" />
       <ul class="spot-list">
         <a href="#"><li
       	<?php
@@ -161,7 +154,7 @@
       <br>
       <br>
       <br>
-      <div id="drift-build" class="building"></div>
+      <div id="drift-build" class="building">Driftmier Engineering Center</div>
       <br>
       <ul class="spot-list">
         <a href="#"><li class="spacer-spot"></li></a>
