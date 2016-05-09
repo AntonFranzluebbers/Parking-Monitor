@@ -18,6 +18,7 @@ body {
   background-color: var(--mat-white);
   color: #616161;
   margin: 0;
+  overflow-x:hidden;
 }
 
 .page-header {
@@ -152,24 +153,53 @@ a:hover {
 }
 
 .spot-list-container {
-  //background-color: #EEEEEE;
-  //box-shadow: 0 0 1em black;
   padding: .1em;
   margin: .1em;
-  transform: rotate(-1deg);
+  width:100%;
+  overflow:hidden;
+}
+
+.spot-list-container #background-image-drift {
+  width:50em;
+  position:absolute;
+  left:-9.5em;
+  top:17.9em;
+}
+
+.spot-list-container .spot-vert-spacer {
+  background-color:rgba(0,0,0,0);
+}
+
+.spot-list-container #drift-spacer-1 {
+  height:2em;
+}
+
+.spot-list-container #drift-spacer-2 {
+  height:14em;
+}
+
+.spot-list-container #drift-spacer-3 {
+  height:2.5em;
+}
+
+.spot-list-container #drift-spacer-4 {
+  height:5em;
 }
 
 .spot-list {
   list-style-type: none;
   margin: 0;
-  float:none;
+  float:left;
+  transform: rotate(-3deg);
+  position:relative;
+  left:2em;
 }
 
 .spot-list li {
   float:left;
-  width: 1em;
-  height: 2em;
-  margin: .1em;
+  width: .5em;
+  height: 1em;
+  margin: .05em;
   background-color: var(--mat-light-gray);
 }
 
@@ -335,7 +365,73 @@ a:hover {
     margin: 1em;
   }
 
+  .spot-list-container #background-image-drift {
+    width:100em;
+    position:absolute;
+    left:-24.5em;
+    top:16.5em;
+  }
+  
   .spot-list {
     margin: auto;
+  }
+
+  .spot-list li { 
+    width: 1em;
+    height: 2em;
+    margin: .1em;
+  }
+
+  .spot-list-container #drift-spacer-1 {
+    height:4em;
+  }
+
+  .spot-list-container #drift-spacer-2 {
+    height:28em;
+  }
+
+  .spot-list-container #drift-spacer-3 {
+    height:5em;
+  }
+
+  .spot-list-container #drift-spacer-4 {
+    height:10em;
+  }
+}
+
+@media screen and (max-width:40em) {
+
+  .spot-list-container #background-image-drift {
+    width:25em;
+    position:absolute;
+    left:-.5em;
+    top:20.45em;
+  }
+
+  .spot-list {
+    left:0;
+    padding:0;
+  }
+  
+  .spot-list li { 
+    width: .25em;
+    height: .5em;
+    margin: ..025em;
+  }
+
+  .spot-list-container #drift-spacer-1 {
+    height:1em;
+  }
+
+  .spot-list-container #drift-spacer-2 {
+    height:7em;
+  }
+
+  .spot-list-container #drift-spacer-3 {
+    height:.0125em;
+  }
+
+  .spot-list-container #drift-spacer-4 {
+    height:2.5em;
   }
 }

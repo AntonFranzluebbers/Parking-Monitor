@@ -51,7 +51,8 @@
       
 
       <div class="spot-list-container">
-      <img id="compass-rose" src="../images/north-arrow-orienteering.svg" />
+      <img id="background-image-drift" src="../images/drift_background.png" />
+      <br>
       <ul class="spot-list">
         <a href="#"><li
       	<?php
@@ -110,9 +111,7 @@
         <a href="#"><li></li></a>
         <a href="#"><li></li></a>
       </ul>
-      <br>
-      <br>
-      <br>
+      <div class="spot-vert-spacer" id="drift-spacer-1"></div>
       <ul class="spot-list">
         <a href="#"><li></li></a>
         <a href="#"><li></li></a>
@@ -151,14 +150,8 @@
         <a href="#"><li></li></a>
         <a href="#"><li></li></a>
       </ul>
-      <br>
-      <br>
-      <br>
-      <div id="drift-build" class="building">Driftmier Engineering Center</div>
-      <br>
+      <div class="spot-vert-spacer" id="drift-spacer-2"></div>
       <ul class="spot-list">
-        <a href="#"><li class="spacer-spot"></li></a>
-        <a href="#"><li class="spacer-spot"></li></a>
         <a href="#"><li class="spacer-spot"></li></a>
         <a href="#"><li class="spacer-spot"></li></a>
         <a href="#"><li class="spacer-spot"></li></a>
@@ -196,9 +189,7 @@
         <a href="#"><li></li></a>
         <a href="#"><li class="yellow-striped"></li></a>
       </ul>
-      <br>
-      <br>
-      <br>
+      <div class="spot-vert-spacer" id="drift-spacer-3"></div>
       <ul class="spot-list">
         <a href="#"><li></li></a>
         <a href="#"><li></li></a>
@@ -242,9 +233,9 @@
         <a href="#"><li></li></a>
         <a href="#"><li></li></a>
       </ul>
-      <br>
-      <br>
+      <div class="spot-vert-spacer" id="drift-spacer-4"></div>
       </div>
+      
       <hr>
       <p>Parking space
         <?php
