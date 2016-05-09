@@ -368,7 +368,7 @@ a:hover {
   .spot-list-container #background-image-drift {
     width:100em;
     position:absolute;
-    left:-24.5em;
+    left:-22em;
     top:16.5em;
   }
   
@@ -404,8 +404,8 @@ a:hover {
   .spot-list-container #background-image-drift {
     width:25em;
     position:absolute;
-    left:-.5em;
-    top:20.45em;
+    left:-6em;
+    top:21.56em;
   }
 
   .spot-list {
@@ -416,7 +416,7 @@ a:hover {
   .spot-list li { 
     width: .25em;
     height: .5em;
-    margin: ..025em;
+    margin: .025em;
   }
 
   .spot-list-container #drift-spacer-1 {
@@ -428,7 +428,7 @@ a:hover {
   }
 
   .spot-list-container #drift-spacer-3 {
-    height:.0125em;
+    height:1.3em;
   }
 
   .spot-list-container #drift-spacer-4 {
